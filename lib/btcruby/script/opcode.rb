@@ -193,6 +193,11 @@ module BTC
     OP_NOP9  = 0xb8
     OP_NOP10 = 0xb9
 
+    OP_CREATE = 0xc1
+    OP_CALL = 0xc2
+    OP_SPEND = 0xc3
+    OP_SENDER = 0xc4
+
     OP_INVALIDOPCODE = 0xff
 
     OPCODE_NAME_TO_VALUE = Hash[*constants.grep(/^OP_/).map{|c| [c.to_s, const_get(c)] }.flatten]
